@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://6nmcbyj7hu8v" path="res://Art/v1.1 dungeon crawler 16x16 pixel pack/enemies/goblin/goblin_idle_spritesheet.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://g4wrospvmdxf" path="res://Art/v1.1 dungeon crawler 16x16 pixel pack/enemies/goblin/goblin_run_spritesheet.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://5s650l0opflc" path="res://Art/v1.1 dungeon crawler 16x16 pixel pack/effects (new)/enemy_afterdead_explosion_anim_spritesheet.png" id="4"]
-[ext_resource type="Script" path="res://Characters/Enemies/Goblin/Goblin.gd" id="5"]
-[ext_resource type="Script" path="res://Characters/Enemies/Goblin/GoblinFSM.gd" id="6"]
+[ext_resource type="Script" uid="uid://b1je03krxkrti" path="res://Characters/Enemies/Goblin/Goblin.gd" id="5"]
+[ext_resource type="Script" uid="uid://cvetvi5k714ub" path="res://Characters/Enemies/Goblin/GoblinFSM.gd" id="6"]
 
 [sub_resource type="AtlasTexture" id="13"]
 atlas = ExtResource("4")
@@ -290,10 +290,10 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_chseu"]
 _data = {
-"dead": SubResource("19"),
-"hurt": SubResource("20"),
-"idle": SubResource("21"),
-"move": SubResource("22")
+&"dead": SubResource("19"),
+&"hurt": SubResource("20"),
+&"idle": SubResource("21"),
+&"move": SubResource("22")
 }
 
 [node name="Goblin" instance=ExtResource("1")]
@@ -316,7 +316,7 @@ shape = SubResource("18")
 
 [node name="AnimationPlayer" parent="." index="3"]
 libraries = {
-"": SubResource("AnimationLibrary_chseu")
+&"": SubResource("AnimationLibrary_chseu")
 }
 
 [node name="PathTimer" parent="." index="4"]

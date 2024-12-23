@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://bheousdjxqa14" path="res://Characters/Character.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://kfcieplqn3ap" path="res://Art/v1.1 dungeon crawler 16x16 pixel pack/heroes/knight/knight_idle_spritesheet.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://beuxbt1hqtnxl" path="res://Art/v1.1 dungeon crawler 16x16 pixel pack/heroes/knight/knight_run_spritesheet.png" id="3"]
-[ext_resource type="Script" path="res://Characters/Player/Player.gd" id="4"]
-[ext_resource type="Script" path="res://Characters/Player/PlayerFSM.gd" id="5"]
+[ext_resource type="Script" uid="uid://bndefub4qj7ge" path="res://Characters/Player/Player.gd" id="4"]
+[ext_resource type="Script" uid="uid://ds8v8a4pg20jp" path="res://Characters/Player/PlayerFSM.gd" id="5"]
 [ext_resource type="PackedScene" uid="uid://bn6jjdha1ecvj" path="res://Weapons/Sword.tscn" id="6"]
 [ext_resource type="Texture2D" uid="uid://5s650l0opflc" path="res://Art/v1.1 dungeon crawler 16x16 pixel pack/effects (new)/enemy_afterdead_explosion_anim_spritesheet.png" id="9"]
 
@@ -307,10 +307,10 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qxyws"]
 _data = {
-"dead": SubResource("19"),
-"hurt": SubResource("20"),
-"idle": SubResource("21"),
-"move": SubResource("22")
+&"dead": SubResource("19"),
+&"hurt": SubResource("20"),
+&"idle": SubResource("21"),
+&"move": SubResource("22")
 }
 
 [node name="Player" instance=ExtResource("1")]
@@ -333,7 +333,7 @@ shape = SubResource("18")
 
 [node name="AnimationPlayer" parent="." index="3"]
 libraries = {
-"": SubResource("AnimationLibrary_qxyws")
+&"": SubResource("AnimationLibrary_qxyws")
 }
 
 [node name="Weapons" type="Node2D" parent="." index="4"]
